@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:mapbox="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_200"
+        android:elevation="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:title="@string/app_name"
+        app:titleTextColor="@android:color/white" />
+
+    <com.doubleclick.shapeofview.ListenableTabLayout
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/purple_700"
+        android:elevation="6dp"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="@null"
+        app:tabMode="scrollable"
+        app:tabSelectedTextColor="@color/purple_500"
+        app:tabTextColor="@android:color/white" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp">
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewPager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.doubleclick.shapeofview.shapes.TriangleView
+            android:id="@+id/triangle"
+            android:layout_width="30dp"
+            android:layout_height="13dp"
+            android:elevation="6dp">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/purple_500" />
+        </com.doubleclick.shapeofview.shapes.TriangleView>
+
+
+        <com.doubleclick.shapeofview.shapes.CircleView
+            android:id="@+id/circle"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:elevation="4dp"
+            app:shape_circle_borderColor="@android:color/black"
+            app:shape_circle_borderWidth="2dp">
+
+<!--            <com.mapbox.mapboxsdk.maps.MapView-->
+<!--                android:id="@+id/mapView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                app:mapbox_renderTextureMode="true"-->
+<!--                mapbox:mapbox_cameraTargetLat="40.73581"-->
+<!--                mapbox:mapbox_cameraTargetLng="-73.99155"-->
+<!--                mapbox:mapbox_cameraZoom="11"-->
+<!--                mapbox:mapbox_styleUrl="mapbox://styles/mapbox/streets-v10" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:paddingTop="25dp"
+                android:shadowColor="@android:color/black"
+                android:shadowDx="2"
+                android:shadowRadius="10"
+                android:text="RoundRect"
+                android:textColor="@android:color/white"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+
+
+        </com.doubleclick.shapeofview.shapes.CircleView>
+
+    </RelativeLayout>
+
+</LinearLayout>
